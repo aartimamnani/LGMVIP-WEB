@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
+:root {
+  --dark: #050505;
+  --light_gray: #f0f0f0;
+  --primary: #4d43d8;
+  --secondary: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+
+body {
+  height: 100vh;
+  color: var(--dark);
+  background: var(--light);
+  position: relative;
+}
+
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: var(--secondary);
+  color: var(--primary);
+  border: 2px solid transparent;
+}
+
+button:hover {
+  color: var(--secondary);
+  background-color: transparent;
+  border: 2px solid var(--secondary);
+}
+
+nav{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--primary);
+  padding: .2rem 3rem;
+}
+
+nav .logo h1{
+  color: var(--secondary);
+  cursor: pointer;
+}
+
+.main{
+  padding: 2rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 3rem;
+}
+
+.main .card{
+  display: flex;
+  padding: 1rem;
+  background: var(--light_gray);
+  box-shadow: 0 0 22px #3336;
+  border-radius: .5rem;
+}
+
+.main .card:hover{
+  background: var(--secondary);
+  cursor: pointer;
+}
+
+
+.main .card .image img{
+  border: 2px solid var(--primary);
+  border-radius: .5rem;
+}
+
+.main .card .info{
+  width: 100%;
+  padding: 1rem;
+  padding-left: 2rem;
+}
+
+.main .card .info .name{
+  font-size: 1.6rem;
+  margin-bottom: .5rem;
+  color: var(--primary);
+}
+
+.main .card .info .email{
+  color: var(--primary);
+}
+
+.main .card .info .number{
+  border: 2px solid var(--dark);
+  border-radius: 50%;
+  float: right;
+  padding: .4rem .6rem;
+  margin-top: 1rem;
+}
+
+.main .card .info .number:hover{
+  background: var(--primary);
+  color: var(--light);
+}
+
+.loader{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -30px;
+  margin-top: -30px;
+  height: 60px;
+  width: 60px;
+  background-image: url(../public/images/loader.gif);
+}
